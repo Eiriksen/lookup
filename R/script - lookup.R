@@ -93,8 +93,8 @@ lookup = function(to, from, what, by, by.x, by.y, new_name, default=NA, overwrit
       {
         # currently looking at column clm
         # put in df_x, at this column, at the current row, the corresponding value in the matching rows in y
-        # but only if overwrite is turned on, or the value in x is NA
-        if (overwrite == T || is.na(df_x[[columns_n[clm]]][r]))
+        # but only if overwrite is turned on, or the value in x is NA, or the value in x is "default"
+        if (overwrite == T || is.na(df_x[[columns_n[clm]]][r]) || df_x[[columns_n[clm]]][r]==default)
         {
           # only overwrite values in X with NA from y if overwriteNA is T
           if(!is.na(rows_y[[columns_o[clm]]][1]) | overwriteNA==T)
