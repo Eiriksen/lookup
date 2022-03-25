@@ -15,7 +15,7 @@
 #' @param overwrite If there is already a value in x where one is to be inserted from y, use this to specify if it should be overwritten or not
 #' @export
 #' @examples all_people = lookup(to=all_people, from=phone_book, what=c("phone_number","adress"), new_name=("mobile", ""), by="name", by.x="Name", default="not found")
-lookup = function(to, from, what, by, by.x, by.y, new_name, default=NA, overwrite=F, overwriteNA=F){
+lookup = function(to, from, what, by, by.x, by.y, new_name, default="", overwrite=F, overwriteNA=F){
   require(tidyverse)
 
   # translate simple parameters to specific ones

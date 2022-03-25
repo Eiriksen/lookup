@@ -12,7 +12,7 @@ lookup(
   by.x,
   by.y,
   new_name,
-  default = NA,
+  default = "",
   overwrite = F,
   overwriteNA = F
 )
